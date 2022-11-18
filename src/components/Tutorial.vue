@@ -3,20 +3,20 @@
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Titulo</label>
         <input type="text" class="form-control" id="title"
           v-model="currentTutorial.title"
         />
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Descripción</label>
         <input type="text" class="form-control" id="description"
           v-model="currentTutorial.description"
         />
       </div>
 
       <div class="form-group">
-        <label><strong>Status:</strong></label>
+        <label><strong>Estatus:</strong></label>
         {{ currentTutorial.published ? "Published" : "Pending" }}
       </div>
     </form>
@@ -25,31 +25,31 @@
       v-if="currentTutorial.published"
       @click="updatePublished(false)"
     >
-      UnPublish
+      quitar publicación
     </button>
     <button v-else class="badge badge-primary mr-2"
       @click="updatePublished(true)"
     >
-      Publish
+      publicar
     </button>
 
     <button class="badge badge-danger mr-2"
       @click="deleteTutorial"
     >
-      Delete
+      eliminar
     </button>
 
     <button type="submit" class="badge badge-success"
       @click="updateTutorial"
     >
-      Update
+      actualizar
     </button>
     <p>{{ message }}</p>
   </div>
 
   <div v-else>
     <br />
-    <p>Please click on a Tutorial...</p>
+    <p>Porfavor seleccione un tutorial...</p>
   </div>
 </template>
 
@@ -98,7 +98,7 @@ export default {
       TutorialDataService.update(this.currentTutorial.id, this.currentTutorial)
         .then(response => {
           console.log(response.data);
-          this.message = 'The tutorial was updated successfully!';
+          this.message = 'The tutorial ha sido actualizado correctamente!';
         })
         .catch(e => {
           console.log(e);
@@ -109,7 +109,7 @@ export default {
       TutorialDataService.delete(this.currentTutorial.id)
         .then(response => {
           console.log(response.data);
-          this.$router.push({ name: "tutorials" });
+          this.$router.push({ name: "tutoriales" });
         })
         .catch(e => {
           console.log(e);

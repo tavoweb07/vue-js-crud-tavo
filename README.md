@@ -1,12 +1,3 @@
-# Vue.js CRUD App with Vue Router & Axios
-
-
-Fullstack with Node.js Express:
-> [Vue.js + Node.js Express + MySQL](https://bezkoder.com/vue-js-node-js-express-mysql-crud-example/)
-
-
-> [Integrate Vue App with Node.js Express](https://bezkoder.com/serve-vue-app-express/)
-
 
 ## Projecto setup
 ```
