@@ -18,7 +18,7 @@ npm install
 npm run serve
 ```
 
-### compialar en production
+### compilar en production
 ```
 npm run build
 ```
